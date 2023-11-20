@@ -38,7 +38,7 @@ jobs:
       uses: azure/container-apps-deploy-action@v1
       with:
         appSourcePath: ${{ github.workspace }}
-        acrName: ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }}
+        acrName: ${{ env.CONTAINER_APP_CONTAINER_NAME }}
         acrUsername: ${{ secrets.MyCoolApi_USERNAME_C460 }}
         acrPassword: ${{ secrets.MyCoolApi_PASSWORD_C460 }}
         imageToBuild: ${{ env.CONTAINER_REGISTRY_LOGIN_SERVER }}/${{ env.CONTAINER_APP_NAME }}:${{ github.sha }}
